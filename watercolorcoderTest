@@ -1,0 +1,26 @@
+#include <iostream>
+#include <assert.h>
+#include "WaterColorCoder.h"
+ 
+void testNumberToPair(int pairNumber, WaterColorCoder::MajorColor expectedMajor, WaterColorCoder::MinorColor expectedMinor) {
+    WaterColorCoder::ColorPair colorPair = WaterColorCoder::GetColorFromPairNumber(pairNumber);
+    std::cout << "Got pair " << colorPair.ToString() << std::endl;
+    assert(colorPair.getMajor() == expectedMajor);
+    assert(colorPair.getMinor() == expectedMinor);
+}
+ 
+void testPairToNumber(WaterColorCoder::MajorColor major, WaterColorCoder::MinorColor minor, int expectedPairNumber) {
+    int pairNumber = WaterColorCoder::GetPairNumberFromColor(major, minor);
+    std::cout << "Got pair number " << pairNumber << std::endl;
+    assert(pairNumber == expectedPairNumber);
+}
+ 
+int main() {
+    testNumberToPair(4, WaterColorCoder::WHITE, WaterColorCoder::BROWN);
+    testNumberToPair(5, WaterColorCoder::WHITE, WaterColorCoder::SLATE);
+ 
+    testPairToNumber(WaterColorCoder::BLACK, WaterColorCoder::ORANGE, 12);
+    testPairToNumber(WaterColorCoder::VIOLET, WaterColorCoder::SLATE, 25);
+ 
+    return 0;
+}
