@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-#include "watercolorcoder.h"
+#include "Watercolorcoder.h"
 
 namespace TelCoColorCoder {
     const char* MajorColorNames[] = { "White", "Red", "Black", "Yellow", "Violet"};
