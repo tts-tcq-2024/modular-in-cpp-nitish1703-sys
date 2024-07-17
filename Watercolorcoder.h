@@ -1,9 +1,9 @@
-#ifndef WATERCOLOR_CODER_H
-#define WATERCOLOR_CODER_H
+#ifndef COLOR_CODER_H
+#define COLOR_CODER_H
  
 #include <string>
  
-namespace WaterColorCoder {
+namespace TelCoColorCoder {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
     enum MinorColor {BLUE, ORANGE, GREEN, BROWN, SLATE};
  
