@@ -1,8 +1,8 @@
 #include <iostream>
 #include <assert.h>
-#include "WaterColorCoder.h"
+#include "watercolorcoder.h"
 
-namespace WaterColorCoder {
+namespace TelCoColorCoder {
     const char* MajorColorNames[] = { "White", "Red", "Black", "Yellow", "Violet"};
     int numberOfMajorColors = sizeof(MajorColorNames) / sizeof(MajorColorNames[0]);
     const char* MinorColorNames[] = { "Blue", "Orange", "Green", "Brown", "Slate"};
